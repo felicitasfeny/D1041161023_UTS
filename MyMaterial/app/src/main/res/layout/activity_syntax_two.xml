@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".syntax_two">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FEC8D8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/syntax1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:text="@string/syntax2"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:textColor="@android:color/white"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/syntax2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/satu"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/syntax3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/dua"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax3"
+                android:src="@drawable/sembilan" />
+
+            <TextView
+                android:id="@+id/syntax5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax4"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/tiga"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax5"
+                android:paddingBottom="50dp"
+                android:src="@drawable/sepuluh" />
+
+            <TextView
+                android:id="@+id/syntax7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax6"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/empat"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/syntax8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/lima"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax8"
+                android:src="@drawable/sebelas" />
+
+            <TextView
+                android:id="@+id/syntax10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax9"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/enam"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax11"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_above="@id/syntax10"
+                android:src="@drawable/duabelas" />
+
+            <TextView
+                android:id="@+id/syntax12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax11"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/tujuh"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax12"
+                android:paddingBottom="50dp"
+                android:src="@drawable/tigabelas" />
+
+            <TextView
+                android:id="@+id/syntax14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax13"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/delapan"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/syntax15"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_above="@id/syntax14"
+                android:src="@drawable/empatbelas" />
+
+            <TextView
+                android:id="@+id/syntax16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax15"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/sembilan"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax17"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_above="@id/syntax16"
+                android:src="@drawable/limabelas" />
+
+            <TextView
+                android:id="@+id/syntax18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax17"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/sepuluh"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax19"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_above="@id/syntax18"
+                android:src="@drawable/enambelas" />
+
+            <TextView
+                android:id="@+id/syntax20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax19"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/sebelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax21"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:layout_above="@id/syntax20"
+                android:src="@drawable/tujuhbelas" />
+
+            <TextView
+                android:id="@+id/syntax22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax21"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/duabelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax22"
+                android:paddingBottom="50dp"
+                android:src="@drawable/delapanbelas" />
+
+            <TextView
+                android:id="@+id/syntax24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax23"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/tigabelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/syntax25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax24"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/empatbelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax25"
+                android:src="@drawable/sembilanbelas" />
+
+            <TextView
+                android:id="@+id/syntax27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax26"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/limabelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax27"
+                android:src="@drawable/duapuluh" />
+
+            <TextView
+                android:id="@+id/syntax29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax28"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/enambelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax30"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:layout_above="@id/syntax29"
+                android:src="@drawable/duasatu" />
+
+            <TextView
+                android:id="@+id/syntax31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax30"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/tigabelas"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/syntax32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax31"
+                android:paddingBottom="50dp"
+                android:src="@drawable/duadua" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="@string/link2"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="20dp">
+
+                    <Button
+                        android:id="@+id/back_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:onClick="back_one"
+                        android:text="@string/back"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

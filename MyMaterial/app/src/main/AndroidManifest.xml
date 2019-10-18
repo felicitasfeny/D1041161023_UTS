@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mymaterial">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".syntax_five"></activity>
+        <activity android:name=".syntax_four" />
+        <activity android:name=".syntax_three" />
+        <activity android:name=".syntax_two" />
+        <activity android:name=".syntax_one" />
+        <activity android:name=".component_five" />
+        <activity android:name=".component_four" />
+        <activity android:name=".component_three" />
+        <activity android:name=".component_two" />
+        <activity android:name=".component_one" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

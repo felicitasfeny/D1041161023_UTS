@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".syntax_one">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFDFD3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:text="@string/syntax1"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/syntax_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding"
+                android:text="@string/text_syntax11"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one"
+                android:paddingBottom="50dp"
+                android:src="@drawable/dua"/>
+
+            <TextView
+                android:id="@+id/syntax_one1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image4"
+                android:padding="@dimen/padding"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/text_syntax12"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one1"
+                android:paddingBottom="50dp"
+                android:src="@drawable/tiga"/>
+
+            <TextView
+                android:id="@+id/syntax_one2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image5"
+                android:padding="@dimen/padding"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/text_syntax13"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one2"
+                android:paddingBottom="50dp"
+                android:src="@drawable/empat"/>
+
+            <TextView
+                android:id="@+id/syntax_one3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image6"
+                android:padding="@dimen/padding"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/text_syntax14"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/image7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one3"
+                android:paddingBottom="50dp"
+                android:src="@drawable/lima"/>
+
+            <TextView
+                android:id="@+id/syntax_one4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image7"
+                android:padding="@dimen/padding"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/text_syntax15"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/image8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one4"
+                android:paddingBottom="50dp"
+                android:src="@drawable/enam"/>
+
+            <TextView
+                android:id="@+id/syntax_one5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image8"
+                android:padding="@dimen/padding"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/text_syntax16"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/image9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one5"
+                android:paddingBottom="50dp"
+                android:src="@drawable/tujuh"/>
+
+            <TextView
+                android:id="@+id/syntax_one6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/image9"
+                android:padding="@dimen/padding"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/text_syntax17"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/image10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/syntax_one6"
+                android:paddingBottom="50dp"
+                android:src="@drawable/delapan"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="@string/link"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="20dp">
+
+                    <Button
+                        android:id="@+id/back_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/back"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/white"
+                        android:onClick="back_one"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

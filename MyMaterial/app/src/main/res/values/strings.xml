@@ -1,0 +1,361 @@
+<resources>
+    <string name="app_name">My Material</string>
+    <string name="component1">ACTIVITY</string>
+    <string name="component2">INTENT</string>
+    <string name="component3">SERVICE</string>
+    <string name="component4">CONTENT PROVIDER</string>
+    <string name="component5">BROADCAST RECEIVER</string>
+    <string name="syntax1">ACTIVITY SYNTAX</string>
+    <string name="syntax2">INTENT SYNTAX</string>
+    <string name="syntax3">SERVICE SYNTAX</string>
+    <string name="syntax4">CONTENT PROVIDER SYNTAX</string>
+    <string name="syntax5">BROADCAST RECEIVER SYNTAX</string>
+    <string name="back">BACK</string>
+    <string name="next">NEXT</string>
+    <string name="text_component1">
+        An activity represents a single screen in your app with an interface the user can interact with.
+        For example, an email app might have one activity that shows a list of new emails, another activity to compose an email, and another activity for reading individual messages.
+        Your app is probably a collection of activities that you create yourself, or that you reuse from other apps.
+        \n
+        Although the activities in your app work with each other to form a cohesive user experience, each activity is independent of the others.
+        This enables your app to start an activity in another app, and it enables other apps to start activities in your app (if your app allows this).
+        For example, a messaging app could start an activity in a camera app to take a picture, then start an activity in an email app to let the user share the picture in email.
+    </string>
+    <string name="lanjutt">
+        Typically, one Activity in an app is specified as the main activity, for example MainActivity.
+        The user sees the main activity when they launch the app for the first time.
+        Each activity can start other activities to perform different actions.
+        \n
+        Each time a new activity starts, the previous activity is stopped, but the system preserves the activity in a stack (the back stack).
+        When the user is done with the current activity and presses the Back button, the activity is popped from the stack and destroyed, and the previous activity resumes.
+        \n
+        When an activity is stopped because a new activity starts, the first activity is notified by way of the activity lifecycle callback methods.
+        The activity lifecycle is the set of states an Activity can be in:
+        when the activity is first created, when its stopped or resumed, and when the system destroys it.
+        You learn more about the activity lifecycle in a later chapter.
+        \n\n
+        \n\n
+        <b>Creating an Activity</b>
+        \n\n
+        To implement an Activity in your app, do the following:
+        \n
+        1. Create an Activity Java class.
+        \n
+        2. Implement a basic UI for the Activity in an XML layout file.
+        \n
+        3. Declare the new Activity in the AndroidManifest.xml file.
+        \n
+        When you create a new project for your app, or add a new Activity to your app by choosing <b><i>File > New > Activity</i></b>,
+        the template automatically performs the steps listed above.
+        \n\n
+        \n\n
+
+        <b>About the Activity Lifecycle</b>
+        \n\n
+        The activity lifecycle is the set of states an activity can be in during its entire lifetime, from the time its created to when its destroyed and the system reclaims its resources.
+        As the user interacts with your app and other apps on the device, activities move into different states.
+        \n
+        For example:
+        \n
+        1. When you start an app, the apps main activity (Activity 1 in the figure below) is started, comes to the foreground, and receives the user focus.
+        \n
+        2. When you start a second activity (Activity 2 in the figure below), a new activity is created and started, and the main activity is stopped.
+        \n
+        3. When you are done with the Activity 2 and navigate back, Activity 1 resumes. Activity 2 stops and is no longer needed.
+        \n
+        4. If the user does not resume Activity 2, the system eventually destroys it.
+    </string>
+    <string name="lanjut2">
+        \n\n
+        \n\n
+        <b>Activity States and Lifecycle Callback Methods</b>
+        \n\n
+        When an Activity transitions into and out of the different lifecycle states as it runs, the Android system calls several lifecycle callback methods at each stage. All of the callback methods are hooks that you can override in each of your Activity classes to define how that Activity behaves when the user leaves and re-enters the Activity. Keep in mind that the lifecycle states (and callbacks) are per Activity, not per app, and you may implement different behavior at different points in the lifecycle of each Activity.
+        \n
+        This figure shows each of the Activity states and the callback methods that occur as the Activity transitions between different states:
+    </string>
+    <string name="lanjut3">
+        Depending on the complexity of your Activity, you probably do not need to implement all the lifecycle callback methods in an Activity.
+        However, its important that you understand each one and implement those that ensure your app behaves the way users expect.
+        Managing the lifecycle of an Activity by implementing callback methods is crucial to developing a strong and flexible app.
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutactivities
+        \n\n
+    </string>
+    <string name="text_syntax11"><b>Activity created: the onCreate() method</b></string>
+    <string name="text_syntax12"><b>Activity started: the onStart() method</b></string>
+    <string name="text_syntax13">Activity resumed/running: the onResume() method</string>
+    <string name="text_syntax14">Activity paused: the onPause() method</string>
+    <string name="text_syntax15">Activity stopped: the onStop() method</string>
+    <string name="text_syntax16">Activity destroyed: the onDestroy() method</string>
+    <string name="text_syntax17">Activity restarted: the onRestart() method</string>
+    <string name="link">
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-2-c-activity-lifecycle-and-state/2-2-c-activity-lifecycle-and-state.html#activitystatesandcallbacks
+        \n\n
+    </string>
+    <string name="text_component2">
+        Each activity is started or activated with an Intent, which is a message object that makes a request to the Android runtime to start an activity or other app component in your app or in some other app.
+        When your app is first started from the device home screen, the Android runtime sends an Intent to your app to start your apps main activity (the one defined with the MAIN action and the LAUNCHER category in the AndroidManifest.xml file).
+        To start another activity in your app, or to request that some other activity available on the device perform an action, you build your own intent and call the startActivity() method to send the intent.
+        In addition to starting an activity, an intent can also be used to pass data between one activity and another.
+        When you create an intent to start a new activity, you can include information about the data you want that new activity to operate on.
+        So, for example, an email Activity that displays a list of messages can send an Intent to the Activity that displays that message.
+        The display activity needs data about the message to display, and you can include that data in the intent.
+        In this chapter you learn about using intents with activities, but intents can also be used to start services or broadcast receivers.
+        You learn how to use those app components in another practical.
+        \n\n
+        \n\n
+        <b>Intent Types</b>
+        \n\n
+        Intents can be explicit or implicit:
+        \n
+        1. Explicit intent: You specify the receiving activity (or other component) using the activitys fully qualified class name.
+        You use explicit intents to start components in your own app (for example, to move between screens in the UI), because you already know the package and class name of that component.
+        \n
+        2. Implicit intent: You do not specify a specific activity or other component to receive the intent.
+        Instead, you declare a general action to perform, and the Android system matches your request to an activity or other component that can handle the requested action.
+        You learn more about using implicit intents in another practical.
+        \n\n
+        \n\n
+        <b>Intent Objects and Fields</b>
+        \n\n
+        For an explicit Intent, the key fields include the following:
+        \n
+        1. The Activity class (for an explicit Intent).
+        This is the class name of the Activity or other component that should receive the Intent; for example, com.example.SampleActivity.class.
+        Use the Intent constructor or the setComponent(), setComponentName(), or setClassName() methods to specify the class.
+        \n
+        2. The Intent data.
+        The Intent data field contains a reference to the data you want the receiving Activity to operate on as a Uri object.
+        \n
+        3. Intent extras.
+        These are key-value pairs that carry information the receiving Activity requires to accomplish the requested action.
+        \n
+        4. Intent flags.
+        These are additional bits of metadata, defined by the Intent class.
+        The flags may instruct the Android system how to launch an Activity or how to treat it after its launched.
+        \n
+        For an implicit Intent, you may need to also define the Intent action and category.
+        You learn more about Intent actions and categories in another chapter.
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#aboutintents
+        \n\n
+    </string>
+    <string name="satu"><b>Starting an Activity with an Explicit Intent</b></string>
+    <string name="dua">
+        If you want to start the ShowMessageActivity to show a specific message in an email app, use code like this:
+    </string>
+    <string name="tiga">
+        You can also manually close the started Activity in response to a user action (such as a Button click) with the finish() method:
+    </string>
+    <string name="empat">Add Data to the Intent</string>
+    <string name="lima">To add data to an explicit Intent from the originating Activity, create the Intent object as you did before:</string>
+    <string name="enam">Use the setData() method with a Uri object to add that URI to the Intent. Some examples of using setData() with URIs:</string>
+    <string name="tujuh">After you have added the data, you can start the Activity with the Intent as usual:</string>
+    <string name="delapan">Add Extras to the Intent</string>
+    <string name="sembilan">Create an Intent object (if one does not already exist):</string>
+    <string name="sepuluh">Use a putExtra() method with a key to put data into the Intent extras. The Intent class defines many putExtra() methods for different kinds of data:</string>
+    <string name="sebelas">
+        Alternately, you can create a new Bundle and populate that Bundle with your Intent extras.
+        Bundle defines many "put" methods for different kinds of primitive data as well as objects that implement Androids Parcelable interface or Javas Serializable.
+    </string>
+    <string name="duabelas">After you have populated the Bundle, add it to the Intent with the putExtras() method (note the s in Extras):</string>
+    <string name="tigabelas">Retrieve the Data From the Intent in the Started Activity</string>
+    <string name="empatbelas">To retrieve the Intent the Activity (or other component) was started with, use the getIntent() method:</string>
+    <string name="limabelas">Use getData() to get the URI from that Intent:</string>
+    <string name="enambelas">Use one of the getExtra() methods to extract extra data out of the Intent object:</string>
+    <string name="tujuhbelas">Or you can get the entire extras Bundle from the Intent and extract the values with the various Bundle methods:</string>
+    <string name="link2">
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html#startingactivitywithexplicitintent
+        \n\n
+    </string>
+    <string name="text_component3">
+        A service is an app component that performs long-running operations, usually in the background.
+        Unlike an Activity, a service does not provide a user interface (UI).
+        Services are defined by the Service class or one of its subclasses.
+        \n
+        A service can be started, bound, or both:
+        \n
+        1. A started service is a service that an app component starts by calling startService().
+        Use started services for tasks that run in the background to perform long-running operations.
+        Also use started services for tasks that perform work for remote processes.
+        \n
+        2. A bound service is a service that an app component binds to itself by calling bindService().
+        Use bound services for tasks that another app component interacts with to perform interprocess communication (IPC).
+        For example, a bound service might handle network transactions, perform file I/O, play music, or interact with a database.
+        \n
+        A service runs in the main thread of its hosting process—the service does not create its own thread and does not run in a separate process unless you specify that it should.
+        If your service is going to do any CPU-intensive work or blocking operations (such as MP3 playback or networking), create a new thread within the service to do that work.
+        By using a separate thread, you reduce the risk of the user seeing application not responding (ANR) errors, and the apps main thread can remain dedicated to user interaction with your activities.
+        In Android 8.0 (Oreo, API 26) or higher, the system imposes some new restrictions on running background services when the app itself is not in the foreground.
+        For details about these restrictions, see Background services and API 26.
+        \n
+        To implement any kind of service in your app, do the following steps:
+        \n
+        1. Declare the service in the manifest.
+        \n
+        2. Extend a Service class such as IntentService and create implementation code, as described in Started services and Bound services, below.
+        \n
+        3. Manage the service lifecycle.
+        \n\n
+        \n\n
+        <b>Started Services</b>
+        \n\n
+        How a service starts :
+        \n
+        1. An app component such as an Activity calls startService() and passes in an Intent.
+        The Intent specifies the service and includes any data for the service to use.
+        \n
+        2. The system calls the services onCreate() method and any other appropriate callbacks on the main thread.
+        Its up to the service to implement these callbacks with the appropriate behavior, such as creating a secondary thread in which to work.
+        \n
+        3. The system calls the services onStartCommand() method, passing in the Intent supplied by the client in step 1.
+        (The client in this context is the app component that calls the service.)
+        \n
+        Once started, a service can run in the background indefinitely, even if the component that started it is destroyed.
+        Usually, a started service performs a single operation and does not return a result to the caller.
+        For example, it might download or upload a file over the network.
+        When the operation is done, the service should stop itself by calling stopSelf(), or another component can stop it by calling stopService().
+        \n
+        For instance, suppose an Activity needs to save data to an online database.
+        The Activity starts a companion service by passing an Intent to startService().
+        The service receives the intent in onStartCommand(), connects to the internet, and performs the database transaction.
+        When the transaction is done, the service uses stopSelf() to stop itself and is destroyed.
+        \n\n
+        \n\n
+        <b>Lifecycle of Started Services vs. Bound Services</b>
+        \n\n
+        A bound service exists only to serve the app component thats bound to it, so when no more components are bound to the service, the system destroys it.
+        Bound services do not need to be explicitly stopped the way started services do (using stopService() or stopSelf()).
+        \n
+        The diagram below shows a comparison between the started and bound service lifecycles.
+    </string>
+    <string name="link3">
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-3-working-in-the-background/lesson-7-background-tasks/7-4-c-services/7-4-c-services.html#services
+        \n\n
+    </string>
+    <string name="delapanbelas">Declaring Services in the Manifest</string>
+    <string name="sembilanbelas">IntentService</string>
+    <string name="duapuluh">Service Lifecycle</string>
+    <string name="duasatu">Foreground Services</string>
+    <string name="link4">
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-3-working-in-the-background/lesson-7-background-tasks/7-4-c-services/7-4-c-services.html
+        \n\n
+    </string>
+    <string name="text_component4">
+        Content providers can help an application manage access to data stored by itself, stored by other apps, and provide a way to share data with other apps.
+        They encapsulate the data, and provide mechanisms for defining data security.
+        Content providers are the standard interface that connects data in one process with code running in another process.
+        Implementing a content provider has many advantages.
+        Most importantly you can configure a content provider to allow other applications to securely access and modify your app data as illustrated in figure 1.
+    </string>
+    <string name="duadua">
+        Use content providers if you plan to share data.
+        If you do not plan to share data, you may still use them because they provide a nice abstraction, but you do not have to.
+        This abstraction allows you to make modifications to your application data storage implementation without affecting other existing applications that rely on access to your data.
+        In this scenario only your content provider is affected and not the applications that access it.
+        For example, you might swap out a SQLite database for alternative storage as illustrated in figure 2.
+    </string>
+    <string name="duatiga">
+        A number of other classes rely on the ContentProvider class:
+        \n
+        1. AbstractThreadedSyncAdapter
+        \n
+        2. CursorAdapter
+        \n
+        3. CursorLoader
+        \n
+        If you are making use of any of these classes you also need to implement a content provider in your application.
+        Note that when working with the sync adapter framework you can also create a stub content provider as an alternative.
+        For more information about this topic, see Creating a stub content provider.
+        In addition, you need your own content provider in the following cases:
+        \n
+        1. You want to implement custom search suggestions in your application
+        \n
+        2. You need to use a content provider to expose your application data to widgets
+        \n
+        3. You want to copy and paste complex data or files from your application to other applications
+        \n
+        The Android framework includes content providers that manage data such as audio, video, images, and personal contact information.
+        You can see some of them listed in the reference documentation for the android.provider package.
+        With some restrictions, these providers are accessible to any Android application.
+        \n
+        A content provider can be used to manage access to a variety of data storage sources, including both structured data, such as a SQLite relational database, or unstructured data such as image files.
+        For more information on the types of storage available on Android, see Storage options, as well as Designing data storage.
+        \n\n
+        \n\n
+        <b>Advantages of Content Providers</b>
+        \n\n
+        Content providers offer granular control over the permissions for accessing data.
+        You can choose to restrict access to a content provider from solely within your application, grant blanket permission to access data from other applications, or configure different permissions for reading and writing data.
+        For more information on using content providers securely, see Security tips for storing data, as well as Content provider permissions.
+        \n
+        You can use a content provider to abstract away the details for accessing different data sources in your application.
+        For example, your application might store structured records in a SQLite database, as well as video and audio files.
+        You can use a content provider to access all of this data, if you implement this development pattern in your application.
+        \n
+        Also note that CursorLoader objects rely on content providers to run asynchronous queries and then return the results to the UI layer in your application.
+        For more information on using a CursorLoader to load data in the background, see Running a query with a CursorLoader.
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://developer.android.com/guide/topics/providers/content-providers?hl=en
+        \n\n
+    </string>
+    <string name="link5">
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://developer.android.com/guide/topics/providers/content-provider-creating.html
+        \n\n
+    </string>
+    <string name="text_component5">
+        Broadcast receivers are app components that can register for system events or app events.
+        When an event occurs, registered broadcast receivers are notified via an Intent.
+        For instance, if you are implementing a media app and you are interested in knowing when the user connects or disconnects a headset, register for the ACTION_HEADSET_PLUG intent action.
+        Use broadcast receivers to respond to messages that have been broadcast from apps or from the Android system.
+        To create a broadcast receiver:
+        \n
+        1. Define a subclass of the BroadcastReceiver class and implement the onReceive() method.
+        \n
+        2. Register the broadcast receiver, either statically or dynamically.
+        \n\n
+        \n\n
+        <b>Subclass a BroadcastReceiver</b>
+        \n\n
+        To create a broadcast receiver, define a subclass of the BroadcastReceiver class.
+        This subclass is where Intent objects are delivered if they match the intent filters you register for.
+        \n
+        Within your subclass:
+        \n
+        1. Implement the onReceive() method, which is called when the BroadcastReceiver object receives an Intent broadcast.
+        \n
+        2. Inside onReceive(), include any other logic that your broadcast receiver needs.
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-3-working-in-the-background/lesson-7-background-tasks/7-3-c-broadcasts/7-3-c-broadcasts.html#broadcast_receivers
+        \n\n
+    </string>
+    <string name="link6">
+        \n\n
+        \n\n
+        <b>BY : </b>
+        https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-3-working-in-the-background/lesson-7-background-tasks/7-3-c-broadcasts/7-3-c-broadcasts.html
+        \n\n
+    </string>
+</resources>
